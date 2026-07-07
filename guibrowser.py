@@ -25,7 +25,7 @@ class tApp:
 
         # Fonte
         self.font = font.Font(family="Courier", size=16)
-     
+        ff=ddf.split("\n")
         y=20
         for t in ff:
             tt=self.canvas.create_text(10, y, text=t, anchor="nw", font=self.font, fill="red")
@@ -71,5 +71,6 @@ for d in ff:
             ddf=ddf+dd[1].strip()+" "
 
 root = tk.Tk()
+
 app = tApp(root,ddf)
 root.mainloop()
